@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satoshi Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Satoshi Store 🛒</h1>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <button id="cartButton" class="cart-button">
+                🛒 Cart <span id="cartCount">0</span>
+            </button>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-text">
+            <p class="small-title">WELCOME TO</p>
+
+            <h2>Satoshi Store</h2>
+
+            <p>
+                Discover amazing products at great prices.
+                Shop easily, quickly and securely.
+            </p>
+
+            <a href="#products" class="shop-button">
+                Shop Now 🛍️
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+
+        <h2>Featured Products</h2>
+
+        <p class="section-description">
+            Check out some of our latest products.
+        </p>
+
+        <div class="products-container">
+
+            <!-- Product 1 -->
+    <div class="product-card">
+
+    <div class="product-image">
+        <img src="product-images/backwoods.jpg.jpg" alt="Classic backwoods">
+    </div>
+
+    <h3>Classic backwoods</h3>
+
+    <p>
+        Natural leafs enjoyable and affordable backwoods.
+    </p>
+
+    <h4>₦<span id="backwoodsPrice">8,000</span></h4>
+
+    <label for="backwoodsSize">Size:</label>
+
+    <select id="backwoodsSize" class="product-option">
+        <option value="Small">Small</option>
+        <option value="Medium">Medium</option>
+        <option value="Large">Large</option>
+    </select>
+
+    <label for="backwoodsColor">Color:</label>
+    <select id="backwoodsColor" class="product-option">
+        <option value="Black">Black</option>
+        <option value="White">White</option>
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+    </select>
+
+    <button class="add-cart">
+        Add to Cart
+    </button>
+
+</div>
+
+            <!-- Product 2 -->
+        <div class="product-card">
+
+    <div class="product-image">
+        <img src="product-images/loud.jpg.jpg" alt="Premium loud">
+    </div>
+
+    <h3>Premium loud</h3>
+
+    <p>
+        Best loud you will ever try available in different
+        sizes.
+    </p>
+
+    <h4>₦<span id="loudPrice">10,000</span></h4>
+
+    <label for="loudSize">Size:</label>
+    <select id="loudSize" class="product-option">
+        <option value="Small">Small</option>
+        <option value="Medium">Medium</option>
+        <option value="Large">Large</option>
+    </select>
+
+    <button class="add-cart">
+        Add to Cart
+    </button>
+
+</div>
+
+
+            <!-- Product 3 -->
+    <div class="product-card">
+
+    <div class="product-image">
+        <img src="product-images/scottish.jpg.jpg" alt="Classic Scottish">
+    </div>
+
+    <h3>Classic Scottish</h3>
+
+    <p>
+        keeps you higher than the most high give it a try and see.
+    </p>
+
+    <h4>₦<span id="scottishPrice">35,000</span></h4>
+
+     <label for="scottishSize">Size:</label>
+    <select id="scottishSize" class="product-option">
+        <option value="Small">Small</option>
+        <option value="Medium">Medium</option>
+        <option value="Large">Large</option>
+    </select>
+
+    <button class="add-cart">
+        Add to Cart
+    </button>
+
+</div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+
+        <h2>About Satoshi Store</h2>
+
+        <p>
+            Satoshi Store is an online shop created to make shopping
+            simple, convenient and enjoyable.
+        </p>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+
+        <h2>Need Help?</h2>
+
+        <p>
+            Contact us if you have any questions about our products.
+        </p>
+
+        <button class="contact-button">
+            Contact Us
+        </button>
+
+    </section>
+
+<!-- Cart Panel -->
+<div id="cartPanel" class="cart-panel">
+
+    <div class="cart-header">
+        <h2>Your Cart 🛒</h2>
+        <button id="closeCart">✕</button>
+    </div>
+
+    <div id="cartItems" class="cart-items">
+        <p>Your cart is empty.</p>
+    </div>
+
+    <div class="cart-footer">
+        <h3>Total: ₦<span id="cartTotal">0</span></h3>
+
+        <button id="checkoutButton" class="checkout-button">
+            Proceed to Checkout
+        </button>
+    </div>
+
+</div>
+<!-- Checkout Section -->
+<section id="checkout" class="checkout-section">
+    <div class="checkout-container">
+
+        <h2>Checkout 🛍️</h2>
+        <p>Complete your details below to place your order.</p>
+
+        <form id="checkoutForm">
+
+            <div class="form-group">
+                <label for="customerName">Full Name</label>
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Enter your full name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="customerPhone">Phone Number</label>
+                <input
+                    type="tel"
+                    id="customerPhone"
+                    placeholder="08012345678"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="customerAddress">Delivery Address</label>
+                <textarea
+                    id="customerAddress"
+                    placeholder="Enter your full delivery address"
+                    required
+                ></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="customerCity">City</label>
+                <input
+                    type="text"
+                    id="customerCity"
+                    placeholder="Enter your city"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="customerNote">Order Note (Optional)</label>
+                <textarea
+                    id="customerNote"
+                    placeholder="Any special instructions?"
+                ></textarea>
+            </div>
+
+            <div class="checkout-summary">
+
+                <h3>Order Summary</h3>
+
+                <div id="checkoutItems">
+                    <p>Your cart is empty.</p>
+                </div>
+
+                <div class="checkout-total">
+                    <strong>Total</strong>
+                    <strong>
+                        ₦<span id="checkoutTotal">0</span>
+                    </strong>
+                </div>
+
+            </div>
+<div class="bank-transfer-box">
+
+    <h3>🏦 Pay by Bank Transfer</h3>
+
+    <p>Transfer the exact order amount to the account below:</p>
+
+    <div class="bank-details">
+
+        <div class="bank-detail">
+            <span>Bank Name</span>
+            <strong>Moniepoint</strong>
+        </div>
+
+        <div class="bank-detail">
+            <span>Account Name</span>
+            <strong>Tsenyen Joseph Agyo</strong>
+        </div>
+
+        <div class="bank-detail">
+            <span>Account Number</span>
+            <strong>5889068100</strong>
+        </div>
+
+        <div class="bank-detail transfer-amount">
+            <span>Amount to Transfer</span>
+            <strong>₦<span id="bankTransferTotal">0</span></strong>
+        </div>
+
+    </div>
+
+    <p class="payment-note">
+        After making the transfer, click the button below to send your
+        order details through WhatsApp.
+    </p>
+
+</div>
+            <button
+                type="submit"
+                class="place-order-button"
+            >
+                I've Made the Transfer — Send Order 📱
+            </button>
+
+        </form>
+
+    </div>
+</section>
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Satoshi Store. All rights reserved.</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
